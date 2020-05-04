@@ -1,0 +1,25 @@
+[user]
+	name = Javier Gil
+	email = javiergilmont@gmail.com
+[github]
+[alias]
+	aall = add --all
+	aallcm = !git add -A && git commit -m
+	cb = checkout -b
+	ch = checkout
+    cm = commit -m
+    drop = checkout -- .
+    plo = pull origin
+	lb = branch
+	lbr = branch -r
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ld = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    st = status
+    rp = remote -v
+    rb = branch -d
+    rfb = branch -D
+    blm = blame --pretty=short -u -L1,+10 --
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[core]
+	editor = vim

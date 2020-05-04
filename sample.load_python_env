@@ -1,0 +1,23 @@
+# execute virtualenv + python path.
+# prompt question
+echo -n "Load default virtual env: [y/n]"
+# read response
+read use_env
+# set y by default
+use_env=${use_env:-y}
+
+if  [ $use_env != 'n' ]; then
+source ~/.virtualenvs/<harcodedpath>/bin/activate
+#export proyect
+export PYTEST='~/.virtualenvs/<harcodedpath>/bin/py.test'
+export PROJECT_ROOT='~/projects/<harcodedpath>/'
+export PYTHONPATH=$PYTHONPATH:'~/projects/<harcodedpath>'
+echo "You are using <harcodedpath>, thanks!"
+else
+    echo "Perhaps you want to work in other python proyect... some tips"
+    echo "Activate virtual env:"
+    echo "\tsource ~/.virtualenvs/<sample>/bin/activate"
+    echo "Export variables \`PROJECT_ROOT\` and \`PYTHONPATH\`:"
+    echo "\texport PROJECT_ROOT='~/projects/<sample>/'"
+    echo "\texport PYTHONPATH=$PYTHONPATH:'~/projects/<sample>'"
+fi
